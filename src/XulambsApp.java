@@ -35,7 +35,6 @@ public class XulambsApp {
         cabecalho();
         int adicionais = 
             Integer.parseInt(IO.readln("Quantos ingredientes? "));
-    
         Pizza nova = new Pizza();
         nova.adicionarIngredientes(adicionais);
 

@@ -22,6 +22,8 @@
  * SOFTWARE.
  */
 
+import java.util.function.Predicate;
+
 /**
  * Pizza: com preço base fixo e preço final definido pela quantidade de ingredientes.
  */
@@ -77,7 +79,7 @@ public class Pizza {
 		return PRECO_BASE + valorAdicionais();
 	}
 
-	private double valorAdicionais() {
+	public double valorAdicionais() {
 		return quantidadeIngredientes * VALOR_INGREDIENTE;
 	}
 
@@ -105,7 +107,7 @@ public class Pizza {
      * @param quantidade Ingredientes a serem adicionados
      * @return TRUE se a quantidade for >=0 e o total <=8, FALSE para casos contrários.
      */
-	private boolean podeAdicionar(int quantidade) {
+	public boolean podeAdicionar(int quantidade) {
         return quantidade >=0
                && quantidade + quantidadeIngredientes <= MAXIMO_INGREDIENTES;
     }
